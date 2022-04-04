@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RandomComplement</string>
+    <string name="complement_button">Get Complement</string>
+</resources>
