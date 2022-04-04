@@ -22,7 +22,11 @@ class MainActivity : AppCompatActivity() {
         complementText = findViewById(R.id.complement_text_view)
         getComplementButton = findViewById(R.id.get_complement_button)
 
+        // Maybe I need an adapter or a liveData observer?
+        complementViewModel.getComplement()
 
+        // Allows for persistence over rotation
+        complementText.text = complementViewModel.complementText
 
         // Issue to work on, the API request takes time and sometimes will not load a complement
         // when the button is first pressed. Alternatively if the button is pressed twice sometimes
@@ -32,8 +36,7 @@ class MainActivity : AppCompatActivity() {
             complementText.text = complementViewModel.complementText
         }
 
-        // Allows for persistence over rotation
-        complementText.text = complementViewModel.complementText
+
 
 
     }
